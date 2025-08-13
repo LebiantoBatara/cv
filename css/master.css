@@ -20,3 +20,9 @@ body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-
 .tag { display:inline-block; padding:4px 10px; border:1px solid #d1d5db; border-radius:999px; font-size:.85rem; }
 
 
+@media print {
+  nav, footer, .no-print { display:none !important; }
+  .card { border: none; padding: 0; }
+  a::after { content: " (" attr(href) ")"; font-size: .8em; }
+}
+
